@@ -98,12 +98,12 @@ for i = 1:num_families
             if ismember(graph_names{j}, graphs_topTrans)
                 
                 % Use top joint transition probability pairs heuristic:
-                [rd_upper, rd_lower, Cs, ~] = rate_distortion_upper(G, 5, 100);
+                [rd_upper, rd_lower, Cs, ~] = rate_distortion(G, 5, 100);
                 
             else
                 
                 % Use top stationary distribution pairs heuristic:
-                [rd_upper, rd_lower, Cs, ~] = rate_distortion_upper(G, 7, 100);
+                [rd_upper, rd_lower, Cs, ~] = rate_distortion(G, 7, 100);
                 
             end
         
